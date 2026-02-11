@@ -1,0 +1,4 @@
+# Environment files
+.env
+pos-backend/.env
+pos-frontend-vite/.env
