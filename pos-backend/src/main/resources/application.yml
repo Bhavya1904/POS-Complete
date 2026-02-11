@@ -1,0 +1,64 @@
+spring:
+  application:
+    name: pos-system
+
+  datasource:
+    url: ${DB_URL}
+    driver-class-name: org.postgresql.Driver
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: sharmabhavya192004@gmail.com
+    password: ${GMAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  devtools:
+    livereload:
+      enabled: true
+
+server:
+  port: 5000
+
+razorpay:
+  api:
+    key: your razor pay key
+    secret: your razorpay secret key
+
+stripe:
+  api:
+    key: your stripe key
+
+
+
+app:
+  frontend:
+    reset-url: ${FRONTEND_RESET_URL}
+    base-url: ${FRONTEND_BASE_URL}
+  admin:
+    password: ${ADMIN_PASSWORD}
+
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+        type:
+          descriptor:
+            sql: TRACE
+
+
+
